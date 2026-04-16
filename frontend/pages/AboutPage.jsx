@@ -1,18 +1,11 @@
 import { useNavigate } from 'react-router-dom'
 
-const TEAM = [
-  { name: 'Aayush Ranpara', role: 'Founder & Chief Editor', avatar: 'A' },
-  { name: 'Krisha Tilva', role: 'Head of Curation', avatar: 'R' },
-  { name: 'Dhwaj Naughanvadra', role: 'Engineering Lead', avatar: 'F' },
-  { name: 'Vrushti Shah', role: 'Community Director', avatar: 'P' },
-]
-
 const VALUES = [
-  { icon: '📖', title: 'Curated Excellence', desc: 'Every title on FolioVault is chosen by our editorial team for quality, originality, and lasting impact.' },
+  { icon: '📖', title: 'Curated Excellence', desc: 'Every title on BookHub is chosen by our editorial team for quality, originality, and lasting impact.' },
   { icon: '🌍', title: 'Global Voices', desc: 'We actively champion authors from every culture, language, and background — amplifying stories that deserve to be heard.' },
   { icon: '⚡', title: 'Instant Everywhere', desc: 'EPUB, PDF, MOBI. Download once, read forever — on your phone, tablet, e-reader, or desktop.' },
   { icon: '🔒', title: 'Privacy Always', desc: 'We will never sell your reading habits. Your library is yours, and your data stays that way.' },
-  { icon: '♻️', title: 'Sustainable Reading', desc: 'Digital books mean fewer trees felled. Every purchase on FolioVault plants 10 minutes of reading in a school library.' },
+  { icon: '♻️', title: 'Sustainable Reading', desc: 'Digital books mean fewer trees felled. Every purchase on BookHub plants 10 minutes of reading in a school library.' },
   { icon: '💬', title: 'Reader Community', desc: 'Join thousands of readers discussing, reviewing, and recommending books in our growing community forums.' },
 ]
 
@@ -29,7 +22,7 @@ export default function AboutPage() {
             Built for <em>Readers,</em><br />by Readers
           </h1>
           <p className="about-hero-sub">
-            FolioVault started as a personal library and grew into a platform
+            BookHub started as a personal library and grew into a platform
             for every curious, passionate, and devoted reader on the planet.
           </p>
         </div>
@@ -45,7 +38,7 @@ export default function AboutPage() {
             </h2>
             <p>
               We believe books are the most powerful technology ever invented.
-              FolioVault exists to make the world's best literature accessible,
+              BookHub exists to make the world's best literature accessible,
               affordable, and beautifully delivered — to anyone, anywhere.
             </p>
             <p>
@@ -92,25 +85,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="about-team">
-        <div className="team-inner">
-          <div className="values-header">
-            <span className="section-tag">The People Behind It</span>
-            <h2>Meet the <em>Team</em></h2>
-          </div>
-          <div className="team-grid">
-            {TEAM.map(({ name, role, avatar }) => (
-              <div key={name} className="team-card">
-                <div className="team-avatar">{avatar}</div>
-                <h3>{name}</h3>
-                <p>{role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="about-cta">
         <div className="about-cta-inner">
@@ -118,7 +92,7 @@ export default function AboutPage() {
             Ready to start<br /><em>your reading journey?</em>
           </h2>
           <p>
-            Join tens of thousands of readers who've made FolioVault their
+            Join tens of thousands of readers who've made BookHub their
             home for ebooks.
           </p>
           <div className="about-cta-btns">

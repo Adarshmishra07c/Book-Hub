@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 
-mongoose.connect('mongodb://localhost:27017/foliovault');
+mongoose.connect('mongodb://localhost:27017/bookhub');
 
 const userSchema = new mongoose.Schema(
   {
@@ -17,7 +17,7 @@ const User = mongoose.model('User', userSchema);
 
 const createAdmin = async () => {
     try {
-        const email = "admin@foliovault.com";
+        const email = "admin@bookhub.com";
         const passwordPlain = "admin123";
         
         await User.deleteOne({ email });

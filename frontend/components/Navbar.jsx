@@ -33,7 +33,7 @@ export default function Navbar() {
           onClick={close}
         >
           <span className="logo-mark">📚</span>
-          <span className="logo-text">Folio<em>Vault</em></span>
+          <span className="logo-text">Book<em>Hub</em></span>
         </NavLink>
 
         {/* Navigation Links */}

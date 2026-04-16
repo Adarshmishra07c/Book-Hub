@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-mongoose.connect('mongodb://localhost:27017/foliovault');
+mongoose.connect('mongodb://localhost:27017/bookhub');
 
 const bookSchema = new mongoose.Schema({
   title: String,
@@ -25,7 +25,7 @@ const generateBooks = () => {
   categories.forEach(genre => {
     for (let i = 1; i <= 5; i++) {
        // Using picsum.photos for 35 distinct, consistent aesthetic portrait images
-       const coverUrl = `https://picsum.photos/seed/folio_${genre}_${i}/400/600`;
+       const coverUrl = `https://picsum.photos/seed/bookhub_${genre}_${i}/400/600`;
        
        books.push({
          title: `${genre} Masterpiece Vol ${i}`,

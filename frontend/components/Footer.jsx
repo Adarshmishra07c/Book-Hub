@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-brand">
           <span className="logo-text">
-            Folio<em>Vault</em>
+            Book<em>Hub</em>
           </span>
           <p>Your world-class digital library. Read more, everywhere.</p>
         </div>
@@ -29,7 +29,7 @@ export default function Footer() {
 
         <div className="footer-info">
           <p className="footer-nav-heading">Contact</p>
-          <p>Aayush@foliovault.com</p>
+          <p>Adarsh@bookhub.com</p>
           <p>Support: Mon–Fri, 9am–6pm IST</p>
           <div className="footer-socials">
             {['𝕏', 'in', '📘'].map((s) => (
@@ -40,7 +40,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <span>© {year} FolioVault. All rights reserved.</span>
+        <span>© {year} BookHub. All rights reserved.</span>
         <span>Made with ♥ for readers everywhere</span>
       </div>
     </footer>

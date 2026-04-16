@@ -90,7 +90,7 @@ export default function LoginPage() {
                 Sign In
               </h1>
               <p style={{ color: '#666' }}>
-                New to FolioVault?{' '}
+                New to BookHub?{' '}
                 <Link to="/signup" style={{ color: '#D4A373', fontWeight: '700', textDecoration: 'none' }}>
                   Create account →
                 </Link>

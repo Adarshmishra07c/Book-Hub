@@ -14,7 +14,7 @@ app.use(express.json());
 // --- DATABASE CONNECTION ---
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ Connected to MongoDB: FolioVault"))
+  .then(() => console.log("✅ Connected to MongoDB: BookHub"))
   .catch((err) => console.error("❌ DB Connection Error:", err));
 
 // --- SCHEMAS & MODELS ---
