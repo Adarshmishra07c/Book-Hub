@@ -21,7 +21,7 @@ export default function SignupPage() {
       const response = await fetch('http://localhost:3001/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData), 
+        body: JSON.stringify(formData),
       })
 
       const data = await response.json()
@@ -65,10 +65,10 @@ export default function SignupPage() {
             {/* Error Message Display */}
             {error && (
               <div className="server-error" style={{
-                color: '#ff4d4d', 
-                backgroundColor: 'rgba(255, 77, 77, 0.1)', 
-                padding: '10px', 
-                borderRadius: '5px', 
+                color: '#ff4d4d',
+                backgroundColor: 'rgba(255, 77, 77, 0.1)',
+                padding: '10px',
+                borderRadius: '5px',
                 marginBottom: '15px',
                 fontSize: '14px',
                 border: '1px solid rgba(255, 77, 77, 0.2)'
@@ -80,37 +80,37 @@ export default function SignupPage() {
             <form onSubmit={handleSubmit} className="auth-fields">
               <div className="input-group">
                 <label>Full Name</label>
-                <input 
-                  type="text" 
-                  className="search-input" 
-                  placeholder="Aayush Ranpara" 
-                  required 
+                <input
+                  type="text"
+                  className="search-input"
+                  placeholder="Enter Your Name"
+                  required
                   value={formData.username}
-                  onChange={(e) => setFormData({...formData, username: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, username: e.target.value })}
                 />
               </div>
 
               <div className="input-group">
                 <label>Email Address</label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   className="search-input"
-                  placeholder="name@example.com" 
-                  required 
+                  placeholder="name@example.com"
+                  required
                   value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
               </div>
 
               <div className="input-group">
                 <label>Password</label>
-                <input 
-                  type="password" 
+                <input
+                  type="password"
                   className="search-input"
-                  placeholder="Min. 8 characters" 
-                  required 
+                  placeholder="Min. 8 characters"
+                  required
                   value={formData.password}
-                  onChange={(e) => setFormData({...formData, password: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 />
                 <small style={{ color: '#888', fontSize: '12px', marginTop: '5px' }}>
                   Must be at least 8 characters.
@@ -123,7 +123,7 @@ export default function SignupPage() {
             </form>
 
             <div className="auth-divider">OR</div>
-            <p style={{textAlign: 'center'}}>
+            <p style={{ textAlign: 'center' }}>
               Already a member? <Link to="/login" className="link-gold">Sign In</Link>
             </p>
           </div>

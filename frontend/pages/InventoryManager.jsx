@@ -217,7 +217,7 @@ export default function InventoryManager() {
           >
             <h3 style={{ color: '#1f1f2e' }}>{book.title}</h3>
             <p style={{ color: '#666' }}>{book.author}</p>
-            <p style={{ margin: '12px 0' }}>${book.price}</p>
+            <p style={{ margin: '12px 0' }}>₹{book.price}</p>
 
             <button
               onClick={() => handleDelete(book._id)}

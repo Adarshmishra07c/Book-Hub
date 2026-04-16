@@ -12,5 +12,5 @@ export function formatExpiry(value) {
 }
 
 export function formatPrice(n) {
-  return `$${Number(n).toFixed(2)}`
+  return `₹${Number(n).toFixed(2)}`
 }

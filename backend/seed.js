@@ -1,55 +1,60 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-// Connect to your local MongoDB
 mongoose.connect('mongodb://localhost:27017/foliovault');
 
 const bookSchema = new mongoose.Schema({
-  _id: String,
   title: String,
   author: String,
   genre: String,
   price: Number,
   cover: String,
-  description: String
+  description: String,
+  rating: Number,
+  reviews: Number
 });
 
 const Book = mongoose.model('Book', bookSchema);
 
-const featuredBooks = [
-  {
-    _id: "69d34b1",
-    title: "The Midnight Theorem", // From Project Report Image 1
-    author: "Kumber of Mah",
-    genre: "Mystery",
-    price: 12.00,
-    cover: "https://images.unsplash.com/photo-1543005814-14b523444a0b",
-    description: "A deep dive into the mathematical mysteries of the night."
-  },
-  {
-    _id: "69d34b2",
-    title: "The Glass Republic", // From Project Report Image 1 & 5
-    author: "Soren Veld",
-    genre: "Sci-Fi",
-    price: 13.49,
-    cover: "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
-    description: "Exploring the fragile nature of a future society."
-  },
-  {
-    _id: "69d34b3",
-    title: "Salt & Sorrows", // From Project Report Image 1 & 5
-    author: "Erin A. Craig",
-    genre: "Fantasy",
-    price: 7.00,
-    cover: "https://images.unsplash.com/photo-1512820790803-83ca734da794",
-    description: "A haunting tale of magic and family secrets."
-  }
-];
+const categories = ['Mystery', 'Sci-Fi', 'Fantasy', 'Thriller', 'Literary', 'Romance', 'Historical'];
+const authors = ["Elena Sterling", "Marcus Finch", "Aura Vance", "Liam Kael", "Soren Veld", "Cora Blake", "J.R. Thorne", "Maya Lee"];
+
+const generateBooks = () => {
+  const books = [];
+  let idCounter = 1;
+
+  categories.forEach(genre => {
+    for (let i = 1; i <= 5; i++) {
+       // Using picsum.photos for 35 distinct, consistent aesthetic portrait images
+       const coverUrl = `https://picsum.photos/seed/folio_${genre}_${i}/400/600`;
+       
+       books.push({
+         title: `${genre} Masterpiece Vol ${i}`,
+         author: authors[Math.floor(Math.random() * authors.length)],
+         genre: genre,
+         price: parseFloat((Math.random() * 20 + 5).toFixed(2)),
+         cover: coverUrl,
+         description: `A fascinating dive into the world of ${genre}. This is volume ${i} of our exclusive collection.`,
+         rating: parseFloat((Math.random() * 1.5 + 3.5).toFixed(1)), // 3.5 to 5.0
+         reviews: Math.floor(Math.random() * 500) + 10
+       });
+       idCounter++;
+    }
+  });
+
+  return books;
+};
 
 const seedDB = async () => {
-  await Book.deleteMany({}); // Clears empty/test data
-  await Book.insertMany(featuredBooks);
-  console.log("✅ Featured Books Restored to Database!");
-  process.exit();
+  try {
+    await Book.deleteMany({}); // Clears existing dataset
+    const allBooks = generateBooks();
+    await Book.insertMany(allBooks);
+    console.log(`✅ successfully inserted ${allBooks.length} books with 35 UNIQUE HD COVERS!`);
+  } catch(e) {
+    console.error(e);
+  } finally {
+    process.exit();
+  }
 };
 
 seedDB();

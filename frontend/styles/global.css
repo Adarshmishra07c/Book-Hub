@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════
    FolioVault — Global Stylesheet
-   Aesthetic: Warm Editorial Luxury
-   Fonts: Playfair Display + DM Sans
+   Aesthetic: Clean Modern Professional
+   Fonts: Outfit + Inter
 ═══════════════════════════════════════════════════ */
 
 /* ── Reset & Base ── */
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: var(--cream);
   color: var(--ink);
   line-height: 1.6;
@@ -26,7 +26,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', sans-serif;
   line-height: 1.2;
 }
 
@@ -38,39 +38,39 @@ input, select, textarea { font-family: inherit; }
 
 /* ── Design Tokens ── */
 :root {
-  --ink:        #0f0e17;
-  --ink-soft:   #2a2833;
-  --paper:      #fffef9;
-  --cream:      #f5f1e8;
-  --cream-dark: #ede9dd;
-  --gold:       #c9963d;
-  --gold-light: #e8b554;
-  --gold-pale:  #fdf3e0;
-  --deep:       #1a1726;
-  --muted:      #6b6878;
-  --muted-lt:   #9b98a8;
-  --border:     #e2ddd2;
-  --border-dk:  #ccc9bc;
+  --ink:        #0f172a;
+  --ink-soft:   #334155;
+  --paper:      #ffffff;
+  --cream:      #f8fafc;
+  --cream-dark: #f1f5f9;
+  --gold:       #2563eb;
+  --gold-light: #3b82f6;
+  --gold-pale:  #eff6ff;
+  --deep:       #1e293b;
+  --muted:      #64748b;
+  --muted-lt:   #94a3b8;
+  --border:     #e2e8f0;
+  --border-dk:  #cbd5e1;
   --white:      #ffffff;
-  --danger:     #d94f4f;
-  --success:    #2d8c5e;
-  --info:       #3b82f6;
+  --danger:     #ef4444;
+  --success:    #10b981;
+  --info:       #0ea5e9;
 
   --radius-sm:  6px;
-  --radius:     12px;
-  --radius-lg:  20px;
-  --radius-xl:  28px;
+  --radius:     10px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
 
-  --shadow-sm:  0 1px 4px rgba(0,0,0,0.06);
-  --shadow:     0 4px 20px rgba(0,0,0,0.08);
-  --shadow-md:  0 8px 32px rgba(0,0,0,0.11);
-  --shadow-lg:  0 16px 56px rgba(0,0,0,0.16);
+  --shadow-sm:  0 1px 2px rgba(0,0,0,0.05);
+  --shadow:     0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -2px rgba(0,0,0,0.04);
+  --shadow-md:  0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.04);
+  --shadow-lg:  0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.04);
 
-  --nav-h: 64px;
+  --nav-h: 72px;
   --max-w: 1200px;
   --side-pad: 24px;
 
-  --transition: 0.22s ease;
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ── App Shell ── */
@@ -225,7 +225,7 @@ em { font-style: italic; color: var(--gold); }
   top: 0;
   z-index: 200;
   height: var(--nav-h);
-  background: rgba(245,241,232,0.94);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
@@ -251,7 +251,7 @@ em { font-style: italic; color: var(--gold); }
 }
 .logo-mark { font-size: 22px; }
 .logo-text {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', serif;
   font-size: 20px;
   font-weight: 700;
   color: var(--ink);
@@ -416,7 +416,7 @@ em { font-style: italic; color: var(--gold); }
 .hero-stats { display: flex; gap: 36px; flex-wrap: wrap; }
 .stat-item { display: flex; flex-direction: column; gap: 1px; }
 .stat-item strong {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', serif;
   font-size: 22px;
   font-weight: 700;
   color: var(--ink);
@@ -569,7 +569,7 @@ em { font-style: italic; color: var(--gold); }
 
 .card-body { padding: 16px 16px 18px; }
 .book-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', serif;
   font-size: 15px;
   font-weight: 700;
   margin: 6px 0 4px;
@@ -583,7 +583,7 @@ em { font-style: italic; color: var(--gold); }
 .card-rating { display: flex; align-items: center; gap: 6px; margin-bottom: 12px; }
 .review-count { font-size: 11px; color: var(--muted-lt); }
 .card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.book-price { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--ink); }
+.book-price { font-family: 'Outfit', serif; font-size: 18px; font-weight: 700; color: var(--ink); }
 
 .btn-add-cart {
   padding: 7px 14px;
@@ -734,7 +734,7 @@ em { font-style: italic; color: var(--gold); }
   margin-bottom: 16px;
 }
 .detail-price {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', serif;
   font-size: 28px;
   font-weight: 700;
   color: var(--ink);
@@ -845,7 +845,7 @@ em { font-style: italic; color: var(--gold); }
   min-width: 80px;
 }
 .score-big {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', serif;
   font-size: 52px;
   font-weight: 900;
   color: var(--ink);
@@ -934,7 +934,7 @@ em { font-style: italic; color: var(--gold); }
 .cart-item-body { display: flex; flex-direction: column; gap: 8px; }
 .cart-item-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
 .cart-item-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', serif;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 2px;
@@ -971,7 +971,7 @@ em { font-style: italic; color: var(--gold); }
 .cart-item-price-col { text-align: right; }
 .unit-price { font-size: 12px; color: var(--muted); display: block; margin-bottom: 2px; }
 .cart-line-total {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', serif;
   font-size: 18px;
   font-weight: 700;
 }
@@ -1006,7 +1006,7 @@ em { font-style: italic; color: var(--gold); }
   padding-top: 16px;
   margin-bottom: 20px;
 }
-.summary-total strong { font-family: 'Playfair Display', serif; font-size: 22px; }
+.summary-total strong { font-family: 'Outfit', serif; font-size: 22px; }
 .cart-trust-badges {
   display: flex;
   flex-direction: column;
@@ -1328,7 +1328,7 @@ em { font-style: italic; color: var(--gold); }
   margin-top: 4px;
   border-top: 2px solid var(--border);
 }
-.confirm-total strong { font-family: 'Playfair Display', serif; font-size: 20px; }
+.confirm-total strong { font-family: 'Outfit', serif; font-size: 20px; }
 
 .checkout-nav {
   display: flex;
@@ -1363,7 +1363,7 @@ em { font-style: italic; color: var(--gold); }
   justify-content: space-between;
   font-size: 16px;
 }
-.co-summary-total strong { font-family: 'Playfair Display', serif; font-size: 20px; }
+.co-summary-total strong { font-family: 'Outfit', serif; font-size: 20px; }
 
 /* Success */
 .checkout-success-page {
@@ -1475,7 +1475,7 @@ em { font-style: italic; color: var(--gold); }
 }
 .mission-stat:hover { box-shadow: var(--shadow-sm); transform: translateY(-2px); }
 .mission-stat strong {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', serif;
   font-size: 26px;
   font-weight: 700;
   color: var(--gold);
@@ -1526,7 +1526,7 @@ em { font-style: italic; color: var(--gold); }
   color: white;
   font-size: 24px;
   font-weight: 700;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1754,7 +1754,7 @@ em { font-style: italic; color: var(--gold); }
   line-height: 1.8;
   color: var(--ink-soft);
   margin-bottom: 40px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .detail-specs {
@@ -1782,7 +1782,7 @@ em { font-style: italic; color: var(--gold); }
 }
 
 .price-tag {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', serif;
   font-weight: 700;
   font-size: 32px;
 }
